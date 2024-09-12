@@ -63,6 +63,11 @@ class MainView(QWidget):
         self.profile_dropdown = QComboBox()  # Profile selector dropdown
         self.next_file_btn = QPushButton("Next File")
         self.next_profile_btn = QPushButton("Next Profile")
+        self.crop_mode_btn = QPushButton("Enter Crop Mode")
+        self.mode_selection = QComboBox()
+        self.mode_selection.addItems(['Normal', 'Delete'])
+        self.undo_btn = QPushButton("Undo")
+        self.redo_btn = QPushButton("Redo")
 
         top_bar.addWidget(self.select_folder_btn)
         top_bar.addWidget(self.selected_folder_label)
@@ -70,6 +75,10 @@ class MainView(QWidget):
         top_bar.addWidget(self.profile_dropdown)  # Add profile selector to top bar
         top_bar.addWidget(self.next_file_btn)
         top_bar.addWidget(self.next_profile_btn)
+        top_bar.addWidget(self.crop_mode_btn)
+        top_bar.addWidget(self.mode_selection)
+        # top_bar.addWidget(self.undo_btn)
+        # top_bar.addWidget(self.redo_btn)
 
         self.layout.addLayout(top_bar)
 
